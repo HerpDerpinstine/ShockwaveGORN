@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C33921DC-5778-4EEC-A2D0-E0AE522CC701}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShockwaveGORN</RootNamespace>
+    <AssemblyName>ShockwaveGORN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)Output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Output\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ShockwaveManager">
+      <HintPath>Libs\ShockwaveManager.dll</HintPath>
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>Libs\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>Libs\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>Libs\MelonLoader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Tomlet">
+      <HintPath>Libs\Tomlet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>Libs\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Libs\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>Libs\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Debug.cs" />
+    <Compile Include="Haptics\eHapticRegion.cs" />
+    <Compile Include="Haptics\eHapticSide.cs" />
+    <Compile Include="Haptics\eHapticType.cs" />
+    <Compile Include="Haptics\HapticPlayback.cs" />
+    <Compile Include="Hooks\Bow.cs" />
+    <Compile Include="Hooks\CrossbowCaestus.cs" />
+    <Compile Include="Hooks\DamagerRigidbody.cs" />
+    <Compile Include="Hooks\GameController.cs" />
+    <Compile Include="Hooks\Gong.cs" />
+    <Compile Include="Hooks\Grapple.cs" />
+    <Compile Include="Hooks\Gun.cs" />
+    <Compile Include="Hooks\SurpriseBox.cs" />
+    <Compile Include="Managers\HapticFeedback.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\Devices\Torso.cs" />
+    <Compile Include="Setup\Devices\Torso2.cs" />
+    <Compile Include="Setup\EffectBase.cs" />
+    <Compile Include="Setup\Effects\Blunt3.cs" />
+    <Compile Include="Setup\Effects\Blunt2.cs" />
+    <Compile Include="Setup\Effects\Blunt.cs" />
+    <Compile Include="Setup\Effects\Cut.cs" />
+    <Compile Include="Setup\Devices\Arm.cs" />
+    <Compile Include="Setup\Devices\Arm2.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Hooks\DamageRelay.cs" />
+    <Compile Include="Hooks\GrabHand.cs" />
+    <Compile Include="Hooks\PlayerDamageRelay.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Managers\Enemy.cs" />
+    <Compile Include="Managers\Player.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Setup\Effects\DrawString.cs" />
+    <Compile Include="Setup\Effects\Gong.cs" />
+    <Compile Include="Setup\Effects\PlayerDamage_Arrow.cs" />
+    <Compile Include="Setup\Effects\PlayerDamage.cs" />
+    <Compile Include="Setup\Effects\Shoot.cs" />
+    <Compile Include="Setup\Effects\ShootString.cs" />
+    <Compile Include="Setup\Effects\Surprise.cs" />
+    <Compile Include="Setup\ConfigModels\Intensity.cs" />
+    <Compile Include="Setup\Effects\HeartBeat.cs" />
+    <Compile Include="Setup\Effects\Stab.cs" />
+    <Compile Include="Setup\Effects\Wobble.cs" />
+    <Compile Include="Setup\ConfigModels\Intensity2.cs" />
+    <Compile Include="Setup\ConfigModels\Toggle.cs" />
+    <Compile Include="Setup\ConfigModels\Velocity.cs" />
+    <Compile Include="Setup\PlayerFakeParent.cs" />
+    <Compile Include="Setup\Weapons\ArmorBreaker.cs" />
+    <Compile Include="Setup\Weapons\Arrow.cs" />
+    <Compile Include="Setup\Weapons\Axe.cs" />
+    <Compile Include="Setup\Weapons\Boulder.cs" />
+    <Compile Include="Setup\Weapons\Bow.cs" />
+    <Compile Include="Setup\Weapons\Caestus\Claws.cs" />
+    <Compile Include="Setup\Weapons\Caestus\CrabClaws.cs" />
+    <Compile Include="Setup\Weapons\Caestus\Crossbow.cs" />
+    <Compile Include="Setup\Weapons\Caestus\GrapplingHook.cs" />
+    <Compile Include="Setup\Weapons\Caestus\IronFist.cs" />
+    <Compile Include="Setup\Weapons\Caestus\ThrowingKnife.cs" />
+    <Compile Include="Setup\Weapons\Caestus\Wings.cs" />
+    <Compile Include="Setup\Weapons\ChainBlade.cs" />
+    <Compile Include="Setup\Weapons\Fist.cs" />
+    <Compile Include="Setup\Weapons\GiantFlail.cs" />
+    <Compile Include="Setup\Weapons\Gladius.cs" />
+    <Compile Include="Setup\Weapons\Glaive.cs" />
+    <Compile Include="Setup\Weapons\GreatAxe.cs" />
+    <Compile Include="Setup\Weapons\GreatSword.cs" />
+    <Compile Include="Setup\Weapons\Gun.cs" />
+    <Compile Include="Setup\Weapons\Halberd.cs" />
+    <Compile Include="Setup\Weapons\Kitana.cs" />
+    <Compile Include="Setup\WeaponBase.cs" />
+    <Compile Include="Setup\Weapons\Mace.cs" />
+    <Compile Include="Setup\Weapons\Morningstar.cs" />
+    <Compile Include="Setup\Weapons\Nunchucks.cs" />
+    <Compile Include="Setup\Weapons\QuarterStaff.cs" />
+    <Compile Include="Setup\Weapons\Shield.cs" />
+    <Compile Include="Setup\Weapons\Spear.cs" />
+    <Compile Include="Setup\Weapons\SpikedRock.cs" />
+    <Compile Include="Setup\Weapons\Sword.cs" />
+    <Compile Include="Setup\Weapons\ThrowingShield.cs" />
+    <Compile Include="Setup\Weapons\Warhammer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\BuildInfo.cs" />
+    <Compile Include="ShockwaveTranslator.cs" />
+    <Compile Include="ThreadedTask.cs" />
+    <Compile Include="ThreadSafeQueue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\ShockWaveIMU.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets" Condition="Exists('packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\ILRepack.Lib.MSBuild.Task.2.0.18.2\build\ILRepack.Lib.MSBuild.Task.targets'))" />
+  </Target>
+</Project>

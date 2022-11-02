@@ -1,0 +1,8 @@
+0Harmony.dll
+Assembly-CSharp.dll
+MelonLoader.dll
+ShockwaveManager.dll
+Tomlet.dll
+UnityEngine.dll
+UnityEngine.CoreModule.dll
+UnityEngine.PhysicsModule.dll
